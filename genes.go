@@ -44,7 +44,7 @@ func (k *koji) writeGenes(genes, filename string) {
 		geneCode = append(geneCode, line)
 	}
 
-	writeStrings(geneFile, geneCode)
+	writeStrings(filename, geneCode)
 }
 
 func (k *koji) conjugateGenes() {
