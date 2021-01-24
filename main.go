@@ -55,6 +55,8 @@ func (k *koji) menu() {
 			k.vitals.sleep++
 		} else if strings.Compare("g", text) == 0 {
 			fmt.Printf(brightyellow+"genome:"+nc+" %s", globalGenes)
+		} else if strings.Compare("b", text) == 0 {
+			k.conjugateGenes()
 		} else if strings.Compare("d", text) == 0 {
 			k.die()
 		} else if strings.Compare("sleep", text) == 0 {

@@ -75,6 +75,13 @@ func kojiSleepFace(k *koji) {
 	fmt.Println(brightcyan + k.name + " " + nc + chooseFace(sleepFaces))
 }
 
+func createDirIfItDontExist(dir string) {
+	if _, err := os.Stat(dir); os.IsNotExist(err) {
+		err = os.MkdirAll(dir, 0755)
+		handle("Could not create directory: ", err)
+	}
+}
+
 func writeFile(filename, textToWrite string) {
 	var file, err = os.OpenFile(filename, os.O_RDWR, 0644)
 	handle("", err)

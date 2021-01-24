@@ -7,7 +7,11 @@ var (
 	logLevel         int    = 2
 	kojiMessageQueue        = []string{}
 	globalGenes      string = ""
-	geneFile         string = ".genes.md"
+	geneDir          string = "./genes/"
+	geneFile         string = geneDir + "genes.md"
+	motherFile       string = geneDir + "mother.md"
+	fatherFile       string = geneDir + "father.md"
+	childFile        string = geneDir + "child.md"
 )
 
 var (
